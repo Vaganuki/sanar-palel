@@ -1,0 +1,10 @@
+<div class="flex">
+  <p-button label="Ajouter un appareil" />
+  <p>{{data.length}} appareils connecté</p>
+  @for (device of data; track $index){
+    <div class="inline-bloc">
+      <p>{{device.name}}</p>
+      <p>{{device.consomation}}</p>
+    </div>
+  }
+</div>
