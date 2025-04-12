@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.map-container {
+  width: 30%;
+  height: 100%;
+  padding: 10px;
+}
+
+.weather-info {
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-bottom: 20px;
+}
+
+mat-card {
+  width: 100%;
+}
+
+h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+mat-divider {
+  margin: 10px 0;
+}
