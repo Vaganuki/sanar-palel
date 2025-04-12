@@ -1,0 +1,21 @@
+<mat-form-field appearance="fill">
+  <mat-label>Entrez une ville</mat-label>
+  <input matInput [(ngModel)]="customCity" placeholder="Ex: Liege" />
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="onCitySearch()">
+  Rechercher la météo
+</button>
+
+<mat-card *ngIf="weatherData">
+  <mat-card-title>Météo à {{ position }}</mat-card-title>
+  <mat-card-content>
+    <div *ngFor="let i of [0, 1, 2, 3, 4]">
+      <h4>📅 Jour {{ i + 1 }}</h4>
+      <p>🌡️ Max : {{ weatherData.temperature_2m_max[i] }}°C</p>
+      <p>🌡️ Min : {{ weatherData.temperature_2m_min[i] }}°C</p>
+      <p>☀️ Soleil : {{ (weatherData.sunshine_duration[i] / 3600).toFixed(1) }} h</p>
+      <mat-divider></mat-divider>
+    </div>
+  </mat-card-content>
+</mat-card>
