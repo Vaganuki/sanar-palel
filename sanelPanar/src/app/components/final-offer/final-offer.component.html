@@ -8,7 +8,7 @@
     <div class="card summary-block">
       <h3>🔌 Consommation des appareils</h3>
       <p>
-        <strong>{{ consommationTotale * 30 / 1000 | number:'1.0-2' }}</strong> Wh/mois
+        <strong>{{ consommationTotale * 30 / 1000 | number:'1.0-2' }}</strong> kWh/mois
         <br>
         ({{ devices.length }} appareil{{ devices.length > 1 ? 's' : '' }} connecté{{ devices.length > 1 ? 's' : '' }})
       </p>
@@ -26,11 +26,11 @@
     <div class="card summary-block">
       <h3>💸 Bilan économiques mensuel :</h3>
       <p>
-        ~<strong>{{ (2.9 * 30 * panneaux) - (consommationTotale * 30) | number: '1.0-2' }}</strong>
+        ~<strong>{{ Math.max((2.9 * 30 * panneaux) - (consommationTotale * 30), 0) | number: '1.0-2' }}</strong>
         kWh/mois
       </p>
       <p>
-        soit <strong>~{{ ((2.9 * 30 * panneaux) - (consommationTotale * 30 /1000) * 0.21) | number: '1.0-2' }}€</strong> / mois
+        soit <strong>~{{ Math.max((2.9 * 30 * panneaux) - (consommationTotale * 30 / 1000) * 0.21, 0) | number: '1.0-2' }}€</strong> / mois
       </p>
     </div>
   </div>

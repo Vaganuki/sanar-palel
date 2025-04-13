@@ -24,4 +24,6 @@ export class FinalOfferComponent {
   get consommationTotale(): number {
     return this.devices.reduce((total, obj) => total + obj.consomation, 0);
   }
+
+  protected readonly Math = Math;
 }
