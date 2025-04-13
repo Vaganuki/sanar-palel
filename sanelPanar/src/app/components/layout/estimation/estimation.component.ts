@@ -7,6 +7,7 @@ import {ObjectsComponent} from '../../objects/objects.component';
 import {DevicesModel} from '../../objects/models/devices.model';
 import {EnergyMapComponent} from '../../energy-map/energy-map.component';
 import {ChargeService} from '../../../services/charge.service';
+import {FinalOfferComponent} from '../../final-offer/final-offer.component';
 
 @Component({
   selector: 'app-estimation',
@@ -15,7 +16,8 @@ import {ChargeService} from '../../../services/charge.service';
     PanneauProdComponent,
     NavBarComponent,
     ObjectsComponent,
-    EnergyMapComponent
+    EnergyMapComponent,
+    FinalOfferComponent
   ],
   templateUrl: './estimation.component.html',
   styleUrl: './estimation.component.scss'
@@ -59,6 +61,10 @@ export class EstimationComponent {
     {
       url:'/estimation#graph',
       name:'Luminosité sur les prochains jours'
+    },
+    {
+      url:'/estimation#resume',
+      name:'Résumé'
     }
   ]
 }

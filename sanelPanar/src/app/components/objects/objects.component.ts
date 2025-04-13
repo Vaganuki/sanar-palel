@@ -1,9 +1,10 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {DevicesModel} from './models/devices.model';
 import {Button} from 'primeng/button';
 import {InputText} from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import {FormsModule} from '@angular/forms';
+import {SharedService} from '../final-offer/services/shared.service';
 
 @Component({
   selector: 'app-objects',
@@ -18,7 +19,10 @@ import {FormsModule} from '@angular/forms';
 })
 export class ObjectsComponent {
 
-   @Input({required: true}) data: DevicesModel[] = [];
+  constructor(private shared: SharedService) {
+  }
+
+  @Input({required: true}) data: DevicesModel[] = [];
    edit: DevicesModel|undefined;
 
    onEdit() : void{
@@ -50,6 +54,7 @@ export class ObjectsComponent {
        this.edit.id = this.data.length >= 1 ? Math.max(...this.data.map(item => item.id)) + 1 : 1;
        this.data.push(this.edit);
        this.edit = undefined;
+       this.shared.setDevices(this.data);
      }
    }
 
@@ -61,6 +66,7 @@ export class ObjectsComponent {
      const index = this.data.findIndex(item => item.id === id);
      if (index !== -1) {
        this.data.splice(index, 1);
+       this.shared.setDevices(this.data);
      }
    }
 }

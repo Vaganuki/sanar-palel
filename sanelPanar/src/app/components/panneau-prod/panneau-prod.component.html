@@ -3,7 +3,7 @@
 
   <div class="p-grid p-align-center p-justify-center slider-input-container">
     <div class="p-col-12 p-md-4">
-      <p-inputNumber [(ngModel)]="value" [min]="1" [max]="90" [showButtons]="true" [suffix]="' panneau' + (this.value > 1 ? 'x' : ' ')" class="w-full mb-3"></p-inputNumber>
+      <p-inputNumber [(ngModel)]="value" (ngModelChange)="onValueChange($event)"></p-inputNumber>
     </div>
     <div class="p-col-12 p-md-8">
       <p-slider [(ngModel)]="value" [step]="1" [min]="1" [max]="90" class="w-full"></p-slider>
@@ -18,7 +18,7 @@
       Production mensuelle : entre <strong>{{ 2.5 * 28 * value | number: '1.0-2' }}</strong> et <strong>{{ 3.3 * 31 * value | number: '1.0-2' }}</strong> kWh
     </p>
     <p>
-      Économie théorique : <strong>~{{ 2.9 * 30 * value | number: '1.0-2' }}€</strong> / mois
+      Économie théorique : <strong>~{{ 2.9 * 30 * value * 0.21 | number: '1.0-2' }}€</strong> / mois
     </p>
   </div>
 </p-card>
