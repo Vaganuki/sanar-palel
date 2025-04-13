@@ -1,6 +1,17 @@
 <div class="flex">
-  <p-button label="Ajouter un appareil" />
-  <p>{{data.length}} appareils connecté</p>
+  @if(edit){
+    <div>
+      <input type="text" pInputText [value]="edit.name" (change)="onEditName($event)" />
+      <p-inputnumber (change)="onEditConsommation($event)" />
+    </div>
+    <div>
+      <p-button label="confirmer" (onClick)="onSubmit()" />
+      <p-button label="annuler" (onClick)="onCancel()" />
+    </div>
+  }@else{
+    <p-button label="Ajouter un appareil" (onClick)="onEdit()" />
+    <p>{{data.length}} appareils connecté</p>
+  }
   @for (device of data; track $index){
     <div class="inline-bloc">
       <p>{{device.name}}</p>
