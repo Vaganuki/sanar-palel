@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, effect, EventEmitter, Input, Output} from '@angular/core';
 import {DevicesModel} from './models/devices.model';
 import {Button} from 'primeng/button';
 import {InputText} from 'primeng/inputtext';
@@ -20,6 +20,9 @@ import {SharedService} from '../final-offer/services/shared.service';
 export class ObjectsComponent {
 
   constructor(private shared: SharedService) {
+    effect(() => {
+      this.shared.setDevices(this.data);
+    });
   }
 
   @Input({required: true}) data: DevicesModel[] = [];
@@ -54,7 +57,6 @@ export class ObjectsComponent {
        this.edit.id = this.data.length >= 1 ? Math.max(...this.data.map(item => item.id)) + 1 : 1;
        this.data.push(this.edit);
        this.edit = undefined;
-       this.shared.setDevices(this.data);
      }
    }
 

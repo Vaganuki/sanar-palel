@@ -18,7 +18,8 @@ export class ChargeService {
         this.charge.set(out.charge);
       })
       this.loadCharge();
-    }, 200);
+    }, 1000);
+    // console.log('Charge service loaded');
   }
 
 }
