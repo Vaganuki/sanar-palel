@@ -1,25 +1,40 @@
 import { Component } from '@angular/core';
 import {MeteoComponent} from "../../meteo/meteo.component";
-import {PanneauProdComponent} from "../../panneau-prod/components/panneau-prod/panneau-prod.component";
+import {PanneauProdComponent} from "../../panneau-prod/panneau-prod.component";
 import {NavBarComponent} from '../nav-bar/nav-bar.component';
 import {LinkModel} from '../nav-bar/models/link.model';
+import {ObjectsComponent} from '../../objects/objects.component';
+import {DevicesModel} from '../../objects/models/devices.model';
 
 @Component({
   selector: 'app-estimation',
   imports: [
     MeteoComponent,
     PanneauProdComponent,
-    NavBarComponent
+    NavBarComponent,
+    ObjectsComponent
   ],
   templateUrl: './estimation.component.html',
   styleUrl: './estimation.component.scss'
 })
 export class EstimationComponent {
 
+  placeHolder: DevicesModel[] = [
+    {
+      id: 0,
+      name:'Un esp 32',
+      consomation: 5
+    }
+  ];
+
   estimationLinks : LinkModel[] = [
     {
       url: "/",
       name: "Accueil"
+    },
+    {
+      url:'/estimation#objet',
+      name: "Mes appareils électroniques"
     },
     {
       url:'/estimation#panneau-prod',

@@ -12,9 +12,11 @@
         Avec notre simulateur, vous pouvez estimer ce que les panneaux solaires pourraient apporter chez vous, en fonction de votre maison, de votre région et même de la météo ! L’objectif ? Mieux comprendre l’impact potentiel, tant sur votre budget que sur l’environnement. Une façon simple de se poser les bonnes questions et de voir si cette solution peut s’intégrer dans votre quotidien, tout en participant à un avenir plus durable 🌞🏡
       </p>
     </div>
+    <div class="cta-button">
+      <p-button [raised]="true" [rounded]="true" class="p-button-warning p-button-rounded p-button-xxl" (onClick)="redirect()">
+        <span>Commencer mon estimation</span>
+        <i class="pi pi-play-circle"></i>
+      </p-button>
+    </div>
   </p-card>
-
-  <div class="cta-button">
-    <p-button label="Commencer mon estimation" icon="pi pi-play" class="p-button-warning p-button-rounded p-button-lg" (onClick)="redirect()"></p-button>
-  </div>
 </div>

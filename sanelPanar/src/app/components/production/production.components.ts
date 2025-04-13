@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartData } from 'chart.js';
+import {FormsModule} from '@angular/forms';
+import {BaseChartDirective} from 'ng2-charts';
 
 @Component({
   selector: 'app-production',
   templateUrl: './production.component.html',
+  imports: [
+    FormsModule,
+    BaseChartDirective
+  ],
   styleUrls: ['./production.component.scss']
 })
 export class ProductionComponent implements OnInit {
