@@ -1,8 +1,8 @@
 import {Component, Inject, inject, PLATFORM_ID} from '@angular/core';
-import {GeolocalisationService} from '../services/geolocalisation.service';
+import {GeolocalisationService} from './services/geolocalisation.service';
 import { MatCardModule } from '@angular/material/card';
 import {CommonModule, isPlatformBrowser} from '@angular/common';
-import {MeteoService} from '../services/meteo.service';
+import {MeteoService} from './services/meteo.service';
 import {FormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';

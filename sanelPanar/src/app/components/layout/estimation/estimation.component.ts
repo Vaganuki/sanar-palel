@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {MeteoComponent} from "../../features/meteo/compononents/meteo.component";
-import {PanneauProdComponent} from "../../features/panneau-prod/components/panneau-prod/panneau-prod.component";
-import {NavBarComponent} from '../../shared/components/layout/nav-bar/nav-bar.component';
-import {LinkModel} from '../../shared/components/layout/nav-bar/models/link.model';
+import {MeteoComponent} from "../../meteo/meteo.component";
+import {PanneauProdComponent} from "../../panneau-prod/components/panneau-prod/panneau-prod.component";
+import {NavBarComponent} from '../nav-bar/nav-bar.component';
+import {LinkModel} from '../nav-bar/models/link.model';
 
 @Component({
   selector: 'app-estimation',
