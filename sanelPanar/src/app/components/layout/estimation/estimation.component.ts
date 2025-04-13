@@ -20,11 +20,7 @@ import {DevicesModel} from '../../objects/models/devices.model';
 export class EstimationComponent {
 
   placeHolder: DevicesModel[] = [
-    {
-      id: 0,
-      name:'Un esp 32',
-      consomation: 5
-    }
+
   ];
 
   estimationLinks : LinkModel[] = [

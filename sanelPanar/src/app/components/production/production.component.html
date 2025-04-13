@@ -1,5 +1,5 @@
 <section class="production-section" id="solar-production">
-    <h2>Solar Production by Region</h2>
+    <h2>Solar Production by RegionModel</h2>
     <div class="controls">
       <label for="regionSelect">Choose a region:</label>
       <select id="regionSelect" [(ngModel)]="selectedRegion">
@@ -7,7 +7,7 @@
       </select>
       <button (click)="refreshChart()">Refresh</button>
     </div>
-  
+
     <div class="chart-container">
       <canvas baseChart
         [data]="chartData"
@@ -16,4 +16,3 @@
       </canvas>
     </div>
   </section>
-  

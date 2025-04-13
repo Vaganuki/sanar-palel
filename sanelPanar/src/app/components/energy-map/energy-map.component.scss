@@ -1,0 +1,60 @@
+.energy-map-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: linear-gradient(to bottom right, #fffbe6, #fff2cc);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  .title {
+    text-align: center;
+    color: #e65100;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  #map {
+    height: 500px;
+    width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 2px solid #ffa726;
+    margin-bottom: 1rem;
+  }
+
+  .legend {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+    h4 {
+      margin-top: 0;
+      color: #e65100;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .circle-example {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ffa726;
+      margin-right: 0.5rem;
+    }
+  }
+}
