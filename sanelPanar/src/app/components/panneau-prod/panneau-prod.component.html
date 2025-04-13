@@ -6,7 +6,7 @@
       <p-inputNumber [(ngModel)]="value" (ngModelChange)="onValueChange($event)"></p-inputNumber>
     </div>
     <div class="p-col-12 p-md-8">
-      <p-slider [(ngModel)]="value" [step]="1" [min]="1" [max]="90" class="w-full"></p-slider>
+      <p-slider [(ngModel)]="value" [step]="1" [min]="1" [max]="90" class="w-full" (ngModelChange)="onValueChange($event)"></p-slider>
     </div>
   </div>
 
