@@ -14,7 +14,7 @@ export class ChargeService {
 
   loadCharge(){
     setTimeout(() => {
-      this.http.get<Charge>("http://mc.jeffwars.net:25134/phoneinfo").subscribe((out) => {
+      this.http.get<Charge>("http://mc.jeffwars.net/phoneinfo").subscribe((out) => {
         this.charge.set(out.charge);
       })
       this.loadCharge();
