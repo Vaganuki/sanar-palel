@@ -38,7 +38,6 @@ export class ObjectsComponent {
    }
 
   onEditConsommation(value: Event){
-    console.log('oui');
     if(this.edit){
       if(value.target instanceof HTMLInputElement) {
         this.edit.consomation = Number(value.target.value);

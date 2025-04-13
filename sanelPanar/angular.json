@@ -119,7 +119,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/primeng/resources/themes/lara-light-amber/theme.css"
+              "node_modules/primeng/resources/themes/lara-light-amber/theme.css",
+              "node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": []
           }
