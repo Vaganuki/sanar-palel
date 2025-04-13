@@ -118,7 +118,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/themes/lara-light-amber/theme.css"
             ],
             "scripts": []
           }

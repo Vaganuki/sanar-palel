@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+h1 {
+  font-size: 2rem;
+  color: #e65100;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.solar-info {
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #444;
+
+
+  .content {
+    p {
+      line-height: 1.7;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    .content p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.cta-button {
+  margin-top: 1rem;
+}

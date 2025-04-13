@@ -1,8 +1,24 @@
-<h1>Combien m’apporterai des panneaux solaires</h1>
-<div class="card flex justify-center">
-  <input type="text" pInputText [(ngModel)]="value" class="w-full mb-4"/>
-  <p-slider [(ngModel)]="value" [step]="1" [min]="1" [max]="90" styleClass="w-90" />
-</div>
-<p>Production : entre {{2.5 * value | number : '1.0-2' }} et {{3.3 * value | number : '1.0-2' }}kWh par jours</p>
-<p>Production : entre {{2.5 * 28 * value | number : '1.0-2' }} et {{3.3 * 31 * value | number : '1.0-2' }}kWh mois</p>
-<p>Soit une economie théorique de ~{{2.9 * 30 * value | number : '1.0-2'}}€/mois</p>
+<p-card class="solar-simulator">
+  <h1>Combien m’apporteraient des panneaux solaires ?</h1>
+
+  <div class="p-grid p-align-center p-justify-center slider-input-container">
+    <div class="p-col-12 p-md-4">
+      <p-inputNumber [(ngModel)]="value" [min]="1" [max]="90" [showButtons]="true" class="w-full mb-3"></p-inputNumber>
+    </div>
+    <div class="p-col-12 p-md-8">
+      <p-slider [(ngModel)]="value" [step]="1" [min]="1" [max]="90" class="w-full"></p-slider>
+    </div>
+  </div>
+
+  <div class="results">
+    <p>
+      Production : entre <strong>{{ 2.5 * value | number: '1.0-2' }}</strong> et <strong>{{ 3.3 * value | number: '1.0-2' }}</strong> kWh par jour
+    </p>
+    <p>
+      Production mensuelle : entre <strong>{{ 2.5 * 28 * value | number: '1.0-2' }}</strong> et <strong>{{ 3.3 * 31 * value | number: '1.0-2' }}</strong> kWh
+    </p>
+    <p>
+      Économie théorique : <strong>~{{ 2.9 * 30 * value | number: '1.0-2' }}€</strong> / mois
+    </p>
+  </div>
+</p-card>

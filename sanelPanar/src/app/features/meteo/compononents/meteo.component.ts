@@ -31,10 +31,23 @@ export class MeteoComponent {
   longitude: number = 500;
   latitude: number = 500;
 
+  dailyWeather: {
+    max: number;
+    min: number;
+    sun: number;
+  }[] = [];
+  jours: string[] = [];
+
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {  }
   position : string = "Recherche en cours...";
   weatherData: any = "test";
   ngOnInit() {
+    this.jours = Array.from({ length: 5 }, (_, i) => {
+      const date = new Date();
+      date.setDate(date.getDate() + i);
+      return date.toLocaleDateString('fr-FR', { weekday: 'short' }); // ex: lun., mar., ...
+    });
     if (isPlatformBrowser(this.platformId)){
       if (typeof window !== 'undefined' && navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -53,7 +66,11 @@ export class MeteoComponent {
             .subscribe((data: any) => {
               this.weatherData = data.daily;
             });
-
+          this.dailyWeather = Array.from({ length: 5 }).map((_, i) => ({
+            max: this.weatherData.temperature_2m_max[i],
+            min: this.weatherData.temperature_2m_min[i],
+            sun: +(this.weatherData.sunshine_duration[i] / 3600).toFixed(1),
+          }));
         }, (error) => {
           console.error('Erreur de géolocalisation :', error);
         });

@@ -6,26 +6,15 @@ import {Button} from 'primeng/button';
 import {AFormComponent} from './components/a-form/a-form.component';
 import {Splitter} from 'primeng/splitter';
 import {HomeComponent} from './components/home/home.component';
+import {MeteoComponent} from './features/meteo/compononents/meteo.component';
+import {PanneauProdComponent} from './features/panneau-prod/components/panneau-prod/panneau-prod.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavBarComponent, Button, AFormComponent, Splitter, HomeComponent],
+  imports: [RouterOutlet, HomeComponent, PanneauProdComponent, NavBarComponent, MeteoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'sanelPanar';
-  homeLinks: LinkModel[] = [
-    {
-      url: "/",
-      name: "Home"
-    }, {
-      url: "/about",
-      name: "A propos"
-    },
-    {
-      url: "/book/create",
-      name: "Create Book"
-    }
-  ];
+  title = 'SolaTrack';
 }
