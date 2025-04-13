@@ -1,0 +1,37 @@
+.solar-footer {
+  background: linear-gradient(to right, #ffe0b2, #fff3e0);
+  padding: 1.5rem 2rem;
+  border-top: 2px solid #ffcc80;
+  text-align: center;
+  margin-top: 3rem;
+
+  .footer-content {
+    max-width: 1100px;
+    margin: auto;
+
+    p {
+      margin: 0;
+      font-weight: 500;
+      color: #e65100;
+    }
+
+    .footer-links {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+
+      a {
+        color: #e65100;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #bf4600;
+        }
+      }
+    }
+  }
+}

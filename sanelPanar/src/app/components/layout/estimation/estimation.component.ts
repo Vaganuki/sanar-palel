@@ -8,6 +8,7 @@ import {DevicesModel} from '../../objects/models/devices.model';
 import {EnergyMapComponent} from '../../energy-map/energy-map.component';
 import {ChargeService} from '../../../services/charge.service';
 import {FinalOfferComponent} from '../../final-offer/final-offer.component';
+import {FooterComponent} from '../footer/footer.component';
 
 @Component({
   selector: 'app-estimation',
@@ -17,7 +18,8 @@ import {FinalOfferComponent} from '../../final-offer/final-offer.component';
     NavBarComponent,
     ObjectsComponent,
     EnergyMapComponent,
-    FinalOfferComponent
+    FinalOfferComponent,
+    FooterComponent
   ],
   templateUrl: './estimation.component.html',
   styleUrl: './estimation.component.scss'

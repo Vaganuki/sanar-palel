@@ -7,6 +7,7 @@ import {Card} from 'primeng/card';
 import {RouterLink, Router, RouterOutlet} from '@angular/router';
 import {NavBarComponent} from '../nav-bar/nav-bar.component';
 import {LinkModel} from '../nav-bar/models/link.model';
+import {FooterComponent} from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ import {LinkModel} from '../nav-bar/models/link.model';
     Card,
     RouterLink,
     NavBarComponent,
-    RouterOutlet
+    RouterOutlet,
+    FooterComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
