@@ -4,7 +4,13 @@ import { inject } from '@angular/core';
 import { delay, finalize } from 'rxjs';
 
 export const loaderInterceptor: HttpInterceptorFn = (req, next) => {
-
+  if(req.url.includes('jeffwars')) return next(req)
+    .pipe(
+      finalize(() => {
+          // faire disparaitre le loader
+          loaderService.stopLoading();
+        }
+      ));
   const loaderService = inject(LoaderService);
   //faire apparaitre le loader
   loaderService.startLoading();

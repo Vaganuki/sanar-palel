@@ -16,7 +16,7 @@
   @for (device of data; track $index){
     <div class="inline-bloc">
       <p>{{device.name}}</p>
-      <p>{{device.consomation}}</p>
+      <p>{{device.consomation}} </p>
       <p-button variant="outlined" severity="danger" (onClick)="onDelete(device.id)">
         <i class="pi pi-trash"></i>
       </p-button>
