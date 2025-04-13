@@ -1,0 +1,14 @@
+<div class="energy-chart-container">
+    <p>Prévision de luminosité et productivité des panneaux dans les prochains jours sur la surface du territoire choisi</p>
+
+    <div class="region-buttons">
+        <button
+                *ngFor="let region of regions"
+                [class.active]="region.id === selectedRegionId"
+                (click)="selectRegion(region.id)">
+            {{ region.name }}
+        </button>
+    </div>
+
+    <canvas *ngIf="isBrowser" baseChart [data]="data" [options]="options" [type]="'bar'"></canvas>
+</div>
