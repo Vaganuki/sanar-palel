@@ -1,0 +1,79 @@
+.solar-simulator {
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  padding: 2rem;
+  color: #444;
+
+  h1 {
+    font-size: 1.8rem;
+    color: #e65100;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+
+  .slider-input-container {
+    margin-bottom: 2rem;
+
+    .p-inputnumber,
+    .p-slider {
+      width: 100%;
+    }
+
+    .p-inputnumber {
+      .p-inputtext {
+        font-size: 1.1rem;
+        padding: 0.75rem;
+      }
+
+      .p-button {
+        background-color: #e65100;
+        border: none;
+
+        &:hover {
+          background-color: #bf4600;
+        }
+      }
+    }
+
+    .p-slider {
+      margin-top: 1rem;
+      .p-slider-range {
+        background: #e65100;
+      }
+
+      .p-slider-handle {
+        background: #e65100;
+        border: none;
+      }
+    }
+  }
+
+  .results {
+    font-size: 1.1rem;
+    line-height: 1.6;
+
+    p {
+      margin-bottom: 1rem;
+      text-align: center;
+
+      strong {
+        color: #e65100;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .results {
+      font-size: 1rem;
+    }
+  }
+}

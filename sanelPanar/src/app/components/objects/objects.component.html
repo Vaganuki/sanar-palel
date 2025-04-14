@@ -1,0 +1,25 @@
+<h1>Mes appareils électriques :</h1>
+<div class="flex">
+  @if(edit){
+    <div>
+      <input type="text" pInputText [value]="edit.name" placeholder="Ex: Four" (change)="onEditName($event)" />
+      <p-inputNumber [(ngModel)]="edit.consomation" (change)="onEditConsommation($event)" suffix="Wh"></p-inputNumber>
+    </div>
+    <div>
+      <p-button label="confirmer" (onClick)="onSubmit()" />
+      <p-button label="annuler" (onClick)="onCancel()" />
+    </div>
+  }@else{
+    <p-button label="Ajouter un appareil" (onClick)="onEdit()" />
+    <p>{{data.length}} appareils connecté</p>
+  }
+  @for (device of data; track $index){
+    <div class="inline-bloc">
+      <p>{{device.name}}</p>
+      <p>{{device.consomation}} Wh</p>
+      <p-button variant="outlined" severity="danger" (onClick)="onDelete(device.id)">
+        <i class="pi pi-trash"></i>
+      </p-button>
+    </div>
+  }
+</div>

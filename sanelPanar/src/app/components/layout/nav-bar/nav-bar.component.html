@@ -1,0 +1,11 @@
+<nav class="solatrack-nav">
+  <div class="logo">
+    <img src="solatrack-favicon.ico" alt="SolaTrack logo" />
+    <span>SolaTrack</span>
+  </div>
+  <ul class="nav-links">
+    @for (link of links(); track $index) {
+      <li><a [href]="link.url" routerLinkActive="active">{{ link.name }}</a></li>
+    }
+  </ul>
+</nav>

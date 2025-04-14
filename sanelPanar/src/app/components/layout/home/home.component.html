@@ -1,0 +1,26 @@
+    <!--    <app-objects [data]="data" />-->
+    <!--    <app-graph-global-usage />-->
+<app-nav-bar [links]="homeLinks"></app-nav-bar>
+<div class="container">
+  <p-card styleClass="solar-info">
+    <h1>Est-ce intéressant d'installer des panneaux solaires ?</h1>
+    <div class="content">
+      <p>
+        Installer des panneaux solaires, c’est un vrai projet pour une famille : ça représente un investissement au départ, mais sur le long terme, cela peut apporter beaucoup. En produisant leur propre électricité grâce au soleil, les foyers réduisent leur consommation sur le réseau, ce qui peut faire baisser les factures d’énergie mois après mois.
+      </p>
+      <p>
+        Avec notre simulateur, vous pouvez estimer ce que les panneaux solaires pourraient apporter chez vous, en fonction de votre maison, de votre région et même de la météo ! L’objectif ? Mieux comprendre l’impact potentiel, tant sur votre budget que sur l’environnement. Une façon simple de se poser les bonnes questions et de voir si cette solution peut s’intégrer dans votre quotidien, tout en participant à un avenir plus durable 🌞🏡
+      </p>
+    </div>
+    <div class="cta-button">
+      <p-button [raised]="true" [rounded]="true" class="p-button-warning p-button-rounded p-button-xxl" (onClick)="redirect()">
+        <span>Commencer mon estimation</span>
+        <i class="pi pi-play-circle"></i>
+      </p-button>
+    </div>
+  </p-card>
+</div>
+    <div style="position: absolute; bottom: 0; width: 100vw;">
+      <app-footer></app-footer>
+
+    </div>

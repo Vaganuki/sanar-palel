@@ -1,0 +1,31 @@
+<script src="../../app.component.ts"></script>
+<div class="weather-form">
+  <mat-form-field appearance="fill" color="primary" class="weather-search">
+    <mat-label>Entrez une ville</mat-label>
+    <input matInput [(ngModel)]="customCity" placeholder="Ex: Liège" />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="onCitySearch()">
+    Rechercher la météo
+  </button>
+</div>
+
+<mat-card *ngIf="weatherData" class="weather-card">
+  <mat-card-title>Météo à {{ position }}</mat-card-title>
+  <mat-card-content>
+
+    <div class="weather-days-container">
+      <h3>Prévisions sur 5 jours</h3>
+      <div *ngIf="weatherData.temperature_2m_max && weatherData.temperature_2m_min && weatherData.sunshine_duration"
+           class="weather-row">
+        <div class="weather-day" *ngFor="let i of [0, 1, 2, 3, 4]">
+          <h4>{{ jours[i] | titlecase }}</h4>
+          <p>🌡️ Max : {{ weatherData.temperature_2m_max[i] }}°C</p>
+          <p>🌡️ Min : {{ weatherData.temperature_2m_min[i] }}°C</p>
+          <p>☀️ {{ (weatherData.sunshine_duration[i] / 3600) | number:'1.1-1' }} h</p>
+        </div>
+      </div>
+    </div>
+
+  </mat-card-content>
+</mat-card>

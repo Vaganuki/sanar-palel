@@ -1,0 +1,42 @@
+.production-section {
+    padding: 3rem 2rem;
+    background-color: #f9f9f9;
+  
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+  
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+  
+      select, button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+      }
+  
+      button {
+        background-color: orange;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: darkorange;
+        }
+      }
+    }
+  
+    .chart-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+  
